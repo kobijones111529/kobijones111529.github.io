@@ -1,1 +1,5 @@
-**/.DS_Store
+# Spago
+.spago/
+output/
+
+.DS_Store
