@@ -1,36 +1,134 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Resume</title>
-    <link href="styles/main.css" rel="stylesheet" type="text/css">
-    <link href="styles/main_old.css" rel="stylesheet" type="text/css">
-  </head>
-  <body>
-    <aside class="sidebar">
-      <div class="container">
-        <img class="portrait" src="./portrait_photo.png" />
-        <div class="intro">
-          <h1 class="name">Kobi Jones</h1>
-          <h2 class="title">Programmer</h2>
-        </div>
-        <nav class="menu">
-          <hr noshade="noshade" class="separator">
-        </nav>
-      </div>
-    </aside>
-    <div id="content_container">
-      <section class="content">
-        <p>Hi</p>
-        <p>Hi</p>
-        <p>Hi</p>
-        <p>Hi</p>
-        <p>Hi</p>
-        <p>Hi</p>
-        <p>Hi</p>
-        <p>Hi</p>
-      </section>
-    </div>
-    <script type="module" src="src/index.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8">
+		<title>Resume</title>
+		<link href="styles/main.css" rel="stylesheet" type="text/css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/5bb7abb7f4.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<aside class="sidebar">
+			<div class="sidebar-container">
+				<img class="portrait" src="./portrait_photo.png" />
+				<div class="intro">
+					<h1 class="name">Kobi Jones</h1>
+					<h2 class="title">Programmer</h2>
+				</div>
+				<hr noshade="noshade" class="separator">
+				<ul class="info">
+					<li id="phone">
+						<i class="fa-solid fa-phone info-icon"></i>
+						<div class="info-content">
+							<!-- <p class="info-type">Phone</p> -->
+							<p class="info-value">(218) 348-0491</p>
+						</div>
+					</li>
+					<li id="email">
+						<i class="fa-solid fa-envelope info-icon"></i>
+						<div class="info-content">
+							<!-- <p class="info-type">Email</p> -->
+							<p class="info-value">kobijonesmail@gmail.com</p>
+						</div>
+					</li>
+					<li id="github">
+						<i class="fa-brands fa-github info-icon"></i>
+						<div class="info-content">
+							<!-- <p class="info-type">GitHub</p> -->
+							<a class="info-value" href="https://github.com/kobijones111529">kobijones111529</a>
+						</div>
+					</li>
+					<li id="location">
+						<i class="fa-solid fa-location-dot info-icon"></i>
+						<div class="info-content">
+							<p class="info-value">Duluth, MN</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</aside>
+		<section class="content">
+			<ul id="sections">
+				<li class="section" id="summary">
+					<i class="fa-solid fa-caret-down"></i>
+					<div class="content">
+						<div class="header">
+							<h1>Summary</h1>
+							<hr noshade="noshade">
+						</div>
+						<p>Programmer seeking knowledge and experience in building real-world web applications.</p>
+					</div>
+				</li>
+				<li class="section" id="education">
+					<i class="fa-solid fa-caret-down"></i>
+					<div class="content">
+						<div class="header">
+							<h1>Education</h1>
+							<hr noshade="noshade">
+						</div>
+						<div class="entry">
+							<h2>Duluth East High School</h2>
+							<p class="time-period">Sepember 2017 - June 2021</p>
+							<ul>
+								<li>3.4 unweighted GPA</li>
+								<li>AP courses in US History and Calculus I</li>
+								<li>Cumulative ACT score of 31</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="section" id="activities">
+					<i class="fa-solid fa-caret-down"></i>
+					<div class="content">
+						<div class="header">
+							<h1>Activities</h1>
+							<hr noshade="noshade">
+						</div>
+						<div class="entry">
+							<h2>FIRST Robotics</h2>
+							<h3>Lead programmer</h3>
+							<p class="time-period">June 2019 - March 2020</p>
+							<ul>
+								<li>Write code for custom-built robots in Java</li>
+								<li>Teach new programmers</li>
+								<li>Delegate work among department members</li>
+								<li>Coordinate design and hardware requirements with other departments</li>
+							</ul>
+						</div>
+						<div class="entry">
+							<h2>FIRST Robotics</h2>
+							<h3>Strategy department member</h3>
+							<p class="time-period">October 2017 - June 2019</p>
+							<ul>
+								<li>Collect data on robot design and performance of other teams</li>
+								<li>Data visualization in Power BI</li>
+								<li>Work with other teams on match strategy at competitions</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="section" id="volunteer-work">
+					<i class="fa-solid fa-caret-down"></i>
+					<div class="content">
+						<div class="header">
+							<h1>Volunteer Work</h1>
+							<hr noshade="noshade">
+						</div>
+						<div class="entry">
+							<h2>FIRST Robotics</h2>
+							<h3>Mentor</h3>
+							<p class="time-period">June 2021 - Present</p>
+							<ul>
+								<li>Help teach programmers of various skill levels</li>
+								<li>Assist students in debugging code</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<script type="module" src="src/index.js"></script>
+	</body>
 </html>

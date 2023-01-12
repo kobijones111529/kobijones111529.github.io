@@ -16,50 +16,150 @@ body {
 }
 
 .sidebar {
-  width: 25%;
   height: 100%;
   overflow: auto;
-  transform: scaleX(-1); /* Put scrollbar on left side */
+  flex: 1;
+  transform: scaleX(-1); /* Put scrollbar on left side, must be undone in children */
   background-color: rgb(55, 55, 95);
 }
-
-.sidebar .container {
+.sidebar a {
+  color: inherit;
+}
+.sidebar a:hover {
+  opacity: 60%;
+}
+.sidebar .sidebar-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 32px;
   margin-top: 10%;
   margin-bottom: 30%;
   transform: scaleX(-1); /* Undo transform from flipping scrollbar side */
-}
-
-.portrait {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 75%;
-  border-radius: 50%;
-}
-
-.intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   color: white;
-  margin-bottom: 32px;
 }
-
-.menu .separator {
+.sidebar .sidebar-container .separator {
   width: 60%;
   border-color: white;
   opacity: 20%;
 }
-
-.content {
+.sidebar .sidebar-container .portrait {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 60%;
+  border-radius: 50%;
+}
+.sidebar .sidebar-container .intro {
   display: flex;
   flex-direction: column;
-  overflow: auto;
-  width: 100%;
+  align-items: center;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+.sidebar .sidebar-container .intro .name {
+  font-size: 40px;
+}
+.sidebar .sidebar-container .intro .title {
+  font-size: 24px;
+}
+.sidebar .sidebar-container .info {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  font-family: "Open Sans", sans-serif;
+}
+.sidebar .sidebar-container .info li {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.sidebar .sidebar-container .info li i {
+  font-size: 20px;
+}
+.sidebar .sidebar-container .info li div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.sidebar .sidebar-container .info li div .info-type {
+  font-size: 16px;
+}
+.sidebar .sidebar-container .info li div .info-value {
+  font-size: 16px;
+}
+
+body .content {
   height: 100%;
-  background-color: white;
-  /* border-radius: 20px 0 0 20px; */
+  flex: 3;
+  overflow: auto;
+}
+body .content #sections {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 32px;
+}
+body .content #sections .section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 32px;
+}
+body .content #sections .section i {
+  color: rgb(55, 55, 95);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 4px;
+  margin-top: 4px;
+}
+body .content #sections .section i:hover {
+  opacity: 40%;
+}
+body .content #sections .section .content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 12px;
+  padding: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Courier New", Courier, monospace;
+}
+body .content #sections .section .content .header {
+  font-family: "Open Sans", sans-serif;
+  font-weight: medium;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body .content #sections .section .content hr {
+  opacity: 40%;
+  border-color: rgb(55, 55, 95);
+}
+body .content #sections .section .content .entry {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+body .content #sections .section .content .entry .time-period {
+  font-style: italic;
+  font-weight: thin;
+  font-family: "Times New Roman", Times, serif;
+  opacity: 60%;
+  margin-bottom: 4px;
+}
+body .content #sections .section .content .entry ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: circle;
+  list-style-position: inside;
+  font-family: "Courier New", Courier, monospace;
+  gap: 4px;
 }/*# sourceMappingURL=main.css.map */
